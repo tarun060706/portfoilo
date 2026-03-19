@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies</title>
+<link rel="stylesheet" href="dev.css">
+
+<style>
+body {
+  background: #f3f4f6;
+  color: #111;
+}
+
+.case-wrap {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 32px 0 72px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: clamp(40px, 7vw, 80px);
+}
+
+.header h1 {
+  font-size: clamp(32px, 5vw, 42px);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.header p {
+  color: #777;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CASE BLOCK */
+.case {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 5vw, 60px);
+  margin-bottom: clamp(56px, 8vw, 100px);
+}
+
+/* REVERSE */
+.case.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.case img {
+  width: min(100%, 500px);
+  flex: 1 1 46%;
+  border-radius: 15px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* TEXT */
+.case-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* TAG COLORS */
+.blue { background: #dbeafe; color: #2563eb; }
+.green { background: #d1fae5; color: #059669; }
+.orange { background: #ffedd5; color: #ea580c; }
+
+/* TITLE */
+.case-content h2 {
+  font-size: clamp(24px, 4vw, 28px);
+  margin: 10px 0;
+}
+
+/* DESC */
+.case-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-blue { background: #2563eb; }
+.btn-green { background: #059669; }
+.btn-orange { background: #ea580c; }
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .case {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case.reverse {
+    flex-direction: column;
+  }
+
+  .case-wrap {
+    padding: 24px 0 56px;
+  }
+
+  .case img {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .case-wrap {
+    width: min(1100px, calc(100% - 1.25rem));
+  }
+
+  .header p,
+  .case-content p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+</head>
+<body>
+
+     <!-- Navbar (same as homepage) -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <h1>Dev</h1>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-icon">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Our services</a>
+                <a href="works.html">My Works</a>
+                <!-- <a href="Case-studies.html">Case-studies</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="menu-panel-cta">Contact Now</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="case-wrap">
+  <div class="header">
+    <h1>Case Studies</h1>
+    <p>Solving real business problems through technology and smart systems.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="case">
+    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="CRM">
+
+    <div class="case-content">
+      <span class="tag blue">EdTech</span>
+      <h2>CRM for Skill Training Institute</h2>
+      <p>
+        Built a CRM system to manage student leads, automate follow-ups,
+        and streamline admission processes. Helped reduce manual work and
+        improved conversion rates.
+      </p>
+
+      <a href="#" class="btn btn-blue">View case study →</a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="case reverse">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Finance">
+
+    <div class="case-content">
+      <span class="tag green">Finance</span>
+      <h2>PSA Software for Finance Agency</h2>
+      <p>
+        Developed a professional services automation system to track jobs,
+        manage employees, and monitor client payments efficiently in one platform.
+      </p>
+
+      <a href="#" class="btn btn-green">View case study →</a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="case">
+    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b7d1b2c" alt="Tea Factory">
+
+    <div class="case-content">
+      <span class="tag orange">Supply Chain</span>
+      <h2>TeaPay – Tea Factory Management</h2>
+      <p>
+        Built a system to streamline tea factory operations, including inventory,
+        supply chain tracking, and vendor payment management.
+      </p>
+
+      <a href="#" class="btn btn-orange">View case study →</a>
+    </div>
+  </div>
+
+</div>
+<script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <link rel="stylesheet" href="dev.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <style>
+body {
+    background: #f8fafc;
+}
+
+/* Section */
+.section-pad {
+    padding: 60px 0 80px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 38px);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Grid */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Card */
+.work-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Image */
+.work-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Content */
+.work-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.work-content h3 {
+    margin-bottom: 10px;
+}
+
+.work-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #f47f45;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #e56d2f;
+}
+
+@media (max-width: 768px) {
+    .section-pad {
+        padding: 48px 0 60px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 28px;
+    }
+
+    .work-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-card img {
+        height: 200px;
+    }
+
+    .work-content {
+        padding: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+    </style>
+
+    <!-- Navbar (same as homepage) -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <h1>Dev</h1>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-icon">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Our services</a>
+                <a href="works.html">My Works</a>
+                <!-- <a href="Case-studies.html">Case-studies</a> -->
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="menu-panel-cta">Contact Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Works Section -->
+    <section class="works section-pad">
+        <div class="container">
+
+            <h2 class="section-title">My Works</h2>
+            <p class="section-subtitle">Some of my recent projects</p>
+
+            <div class="work-grid">
+
+                <!-- Card 1 -->
+                <div class="work-card">
+                    <img src="project1.jpg" alt="">
+                    <div class="work-content">
+                        <h3>CRM System</h3>
+                        <p>Custom CRM for a skill training institute to manage leads, student data, and streamline record keeping.</p>
+                        <a href="Case-studies.html" class="btn" style="margin-top: 15px;">About Project</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="work-card">
+                    <img src="project2.jpg" alt="">
+                    <div class="work-content">
+                        <h3>PSA Software</h3>
+                        <p>Professional services automation system for finance agency to manage jobs, clients, employees, and fee tracking.</p>
+                        <a href="Case-studies.html" class="btn">About Project</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="work-card">
+                    <img src="project3.jpg" alt="">
+                    <div class="work-content">
+                        <h3>TeaPay Software</h3>
+                        <p>End-to-end solution for tea factory operations including production tracking and supply chain management.</p>
+                         <a href="Case-studies.html" class="btn">About Project</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="work-card">
+                    <img src="project4.jpg" alt="">
+                    <div class="work-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio with animations.</p>
+                        <a href="#" class="btn">About Project</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <script src="menu.js"></script>
+</body>
+</html>
